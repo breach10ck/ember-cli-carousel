@@ -1,0 +1,9 @@
+{{yield}}
+
+<div class="carousel-navigation-buttons">
+  <ul>
+    {{#each carousel_items as |carousel_item index|}}
+      <a href="#" {{action 'slideTo' index}} class="{{if carousel_item.isActive 'active'}}"><li> </li></a>
+    {{/each}}
+  </ul>
+</div>

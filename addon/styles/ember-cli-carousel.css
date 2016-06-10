@@ -1,0 +1,124 @@
+.ember-cli-carousel {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.ember-cli-carousel-item {
+  display: block;
+  position: absolute;
+  left: -200%;
+  animation-name: slide-out-right;
+  animation-duration: 1s;
+}
+
+.ember-cli-carousel .active {
+  left: 0%;
+  animation-name: slide-in-right;
+  animation-duration: 1s;
+}
+
+.ember-cli-carousel .rewind {
+  left: 0%;
+  animation-name: slide-in-left;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes slide-in-right {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@keyframes slide-in-right {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@-webkit-keyframes slide-in-left {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@keyframes slide-in-left {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@-webkit-keyframes slide-out-right {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes slide-out-right {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@-webkit-keyframes slide-out-left {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes slide-out-left {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+.carousel-navigation-buttons {
+  display: block;
+  clear: both;
+  position: absolute;
+  bottom: 2px;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.carousel-navigation-buttons {
+  padding: 0px;
+}
+.carousel-navigation-buttons ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  color: black;
+  z-index: 12;
+}
+.carousel-navigation-buttons ul li {
+  display: inline-block;
+  border-radius: 7px;
+  width: 14px;
+  margin: 3px;
+  height: 14px;
+  border: 1px solid grey;
+  background-color: #c0c0c0;
+}
+.carousel-navigation-buttons ul .active li {
+  border: 1px solid #323232;
+  background-color: #323232;
+}

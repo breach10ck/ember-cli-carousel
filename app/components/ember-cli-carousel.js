@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-carousel/components/ember-cli-carousel';
