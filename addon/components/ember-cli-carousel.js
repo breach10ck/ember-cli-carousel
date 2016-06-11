@@ -24,6 +24,10 @@ export default Ember.Component.extend({
     this.set('activeIndex', (this.get('activeIndex')+1)%this.get('carouselLength'));
     this.set('runLoop',Ember.run.later(this, this.slideRight, this.get('timeInterval')));
   },
+  didDestroyElement: function(){
+    this._super(...arguments);
+    Ember.run.cancel(this.get('runLoop'));
+  },
   actions: {
     slideTo: function(index){
       Ember.run.cancel(this.get('runLoop'));
