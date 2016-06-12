@@ -2,7 +2,7 @@
 
 #Usage
 
-    {{#ember-cli-carousel timeInterval=3000}}
+    {{#ember-cli-carousel timeInterval=3000 reverse=false}}
         {{#ember-cli-carousel-item}}
             <img src="http://www.ew.com/sites/default/files/i/2013/01/17/slp-jennifer-lawrence.jpg">
         {{/ember-cli-carousel-item}}
@@ -13,13 +13,11 @@
 
 
 
-This README outlines the details of collaborating on this Ember addon.
-
 ## Installation
 
-    npm install ember-cli-carousel --save
-            or
     ember install ember-cli-carousel
+        or
+    npm install ember-cli-carousel --save
 
 
 
